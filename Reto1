@@ -5,28 +5,28 @@
  * - Lanza un error si el array de entrada no es correcto.
  */
 
-const array = [1];
-const array2 = [];
+const dataIn = [1, 50];
+const dataOut = [];
 
-let initNumArray = array[0];
+let initNumdataIn = dataIn[0];
 
-let finishtNumArray = array.pop();
+let finishtNumdataIn = dataIn[dataIn.length - 1];
 
 let error = false;
 
-for (let index = 0; index < array.length; index++) {
-  if (array[index] >= array[index + 1] || array.length == 1) {
+for (let index = 0; index < dataIn.length; index++) {
+  if (dataIn[index] >= dataIn[index + 1] || dataIn.length == 1) {
     error = true;
   }
 }
 
 if (!error) {
-  for (let index = initNumArray + 1; index < finishtNumArray; index++) {
-    if (!array.find((Element) => Element == index)) {
-      array2.push(index);
+  for (let index = initNumdataIn + 1; index < finishtNumdataIn; index++) {
+    if (!dataIn.find((Element) => Element === index)) {
+      dataOut.push(index);
     }
   }
-  console.log(array2);
+  console.log(dataOut);
 } else {
   console.log("error");
 }
