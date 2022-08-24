@@ -5,7 +5,7 @@
  * - Lanza un error si el array de entrada no es correcto.
  */
 
-const dataIn = [1, 50];
+const dataIn = [5, 10, 20];
 const dataOut = [];
 
 let initNumdataIn = dataIn[0];
