@@ -1,0 +1,27 @@
+const array = [1];
+const array2 = [];
+
+let initNumArray = array[0];
+
+
+let finishtNumArray = array.pop();
+
+let error = false;
+
+
+for (let index = 0; index < array.length; index++) {
+  if (array[index] >= array[index + 1] || array.length == 1) {
+    error = true;
+  }
+}
+
+if (!error) {
+  for (let index = initNumArray + 1; index < finishtNumArray; index++) {
+    if (!array.find((Element) => Element == index)) {
+      array2.push(index);
+    }
+  }
+  console.log(array2);
+} else {
+  console.log("error");
+}
